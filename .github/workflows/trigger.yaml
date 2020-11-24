@@ -5,9 +5,12 @@ on:
       - main
 
 jobs:
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Trigge event
-      run: |
-        DST_WORKFLOW=build.yaml DST_REPO=lestrrat/gh-actions-proxy ./trigger.sh 
+  trigger:
+    runs-on: ubuntu-latest
+    name: Trigger event on another repository
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Trigge event
+        run: |
+          DST_WORKFLOW=build.yaml DST_REPO=lestrrat/gh-actions-proxy ./trigger.sh 

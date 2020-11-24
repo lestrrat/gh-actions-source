@@ -22,7 +22,7 @@ fi
 if [[ -z "$DST_REPO" ]]; then
 	echo "DST_REPO (format: "username/reponame") environment variable is required"
 	exit 1
-]]
+fi
 
 if [[ -z "$DST_WORKFLOW" ]]; then
 	echo "DST_WORKFLOW (i.e. name of the workflow file) environment variable is required"

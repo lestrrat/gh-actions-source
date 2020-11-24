@@ -13,4 +13,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Trigge event
         run: |
-          DST_WORKFLOW=build.yaml DST_REPO=lestrrat/gh-actions-proxy ./trigger.sh 
+          TRIGGER_USERNAME=${{ secrets.TRIGGER_USERNAME }} \
+          TRIGGER_TOKEN=${{ secrets.TRIGGER_TOKEN }} \
+          DST_WORKFLOW=build.yaml \
+          DST_REPO=lestrrat/gh-actions-proxy \
+          ./trigger.sh 

@@ -33,6 +33,6 @@ curl -XPOST \
 	-u "$TRIGGER_USERNAME:$TRIGGER_TOKEN" \
 	-H "Accept: application/vnd.github.everest-preview+json" \
 	-H "Content-Type: application/json" \
-	--data '{"ref": "master"}' \
+	--data '{"ref": "main"}' \
 	https://api.github.com/repos/$DST_REPO/actions/workflows/$DST_WORKFLOW/dispatches 
 
